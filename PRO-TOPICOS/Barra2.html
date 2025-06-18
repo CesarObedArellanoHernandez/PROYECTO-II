@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="barra2.css">
+    <link rel="stylesheet" href="carrucel.css">
+    <link rel="stylesheet" href="imageViewer.css"> 
+    <style>
+    </style>
+</head>
+<body>
+    <nav class="navbar-logo">
+        <div class="logo-container">
+            <img src="Torch.webp" alt="Logo iDeepGames" class="logo-image">
+            <a href="Barra2.html" class="logo">iDeepGames</a>
+        </div>
+        <ul class="nav-list-logo">
+             <li><a href="barra2.html">Inicio</a></li>
+            <li><a href="FiltrosCreativos.html">Filtros creativos</a></li>
+            <li><a href="EfectosdeSupervicion.html">Efectos de supervicion</a></li>
+            <li><a href="GaleriaAnimada.html">Galeria animada</a></li>
+            <li><a href="Creditos.html">Creditos/inspiracion</a></li>
+        </ul>
+    </nav>
+    <main class="contenido">
+
+        <div class="bienvenido-text">Bienvenido       
+        </div>
+        
+        <div class="slider-container"> 
+            <div class="slider">
+                <div class="tarjetas">
+                    <img src="pac.gif" alt="Pac-Man">
+                </div>
+                <div class="tarjetas">
+                    <img src="fortnite.gif" alt="Fortnite">
+                </div>
+                <div class="tarjetas">
+                    <img src="minecraft.gif" alt="Minecraft">
+                </div>
+                <div class="tarjetas">
+                    <img src="jefe.gif" alt="Jefe Final">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImage" src="mARIO8.gif" alt="BIENVENIDO">
+    </div>
+
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+
+        var galleryImages = document.querySelectorAll(".tarjetas img");
+
+        galleryImages.forEach(function(img) {
+            img.onclick = function()
+            {
+                modal.style.display = "flex"; 
+                modalImg.src = this.src; 
+            }
+        });
+
+        modal.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
